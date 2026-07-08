@@ -22,16 +22,16 @@ code
 ```bash
 python multiplayer.py
 ```
-🖼️ Graphical User Interface (GUI)
+## 🖼️ Graphical User Interface (GUI)
 The custom Pygame GUI visually communicates the hierarchical state representation of UTTT, managing both the individual 3×3 micro-grids and the global 3×3 macro-board.
 <img width="602" height="626" alt="image (1)" src="https://github.com/user-attachments/assets/1cae2536-9288-444c-8b1b-43ad39e88964" />
 
-🤖 Implemented Agents
+## 🤖 Implemented Agents
 Iterative Deepening Minimax: Optimized using Alpha-Beta pruning and a Transposition Table (memoization cache) to handle the directed acyclic graph (DAG) structure of the game state. Operating under a strict 2.0-second time limit, it evaluates branches to varying depths depending on branching factor constraints.
 Pure MCTS: A statistical sampling agent driven by the standard Upper Confidence bound applied to Trees (UCT) formula. It conducts completely random rollouts to terminal game states to approximate state values.
 Heuristic MCTS: Designed to combat MCTS vulnerability to deep tactical traps. Rollouts are truncated at a maximum depth of 15 steps, and non-terminal leaf nodes are evaluated statically using our domain-specific heuristic function.
 Deterministic Rule-Based Baseline: Evaluates moves based on a strict priority ladder: local board wins, local board blocks, local center control, and fallback random selections.
-📊 Empirical Evaluation & Tournament Results
+## 📊 Empirical Evaluation & Tournament Results
 We conducted extensive, fairness-controlled tournaments (alternating starting positions to negate the First-Player Advantage) to establish a comprehensive performance hierarchy.
 1. Simulation Matchups (100-Game Tournaments)
 The classical, depth-first exhaustive Minimax agent dominated both the rule-based baseline and the statistical sampling frameworks:
@@ -47,7 +47,7 @@ Minimax (Agent 1)	Human (Agent 2)	Draws
 Analysis: Human players managed to bridge the tactical gap by exploiting the strong First-Player Advantage when starting first, and through strategic pattern adaptation (identifying the agent's deterministic preference for local center-cells). However, the agent's absolute tactical safety and lack of blunder vulnerability ultimately secured a 60% majority win rate.
 🛠️ Project Structure
 code
-Bash
+```bash
 ├── game_env.py          # Primary Ultimate Tic-Tac-Toe environment logic
 ├── minmax_agent.py      # Iterative Deepening Minimax agent with transposition caching
 ├── mcts_agent.py        # Implementation of Pure and Heuristic MCTS agents
