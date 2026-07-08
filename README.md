@@ -34,14 +34,12 @@ Heuristic MCTS: Designed to combat MCTS vulnerability to deep tactical traps. Ro
 Deterministic Rule-Based Baseline: Evaluates moves based on a strict priority ladder: local board wins, local board blocks, local center control, and fallback random selections.
 ## 📊 Empirical Evaluation & Tournament Results
 We conducted extensive, fairness-controlled tournaments (alternating starting positions to negate the First-Player Advantage) to establish a comprehensive performance hierarchy.
-1. Simulation Matchups (100-Game Tournaments)
+### 1. Simulation Matchups (100-Game Tournaments)
 The classical, depth-first exhaustive Minimax agent dominated both the rule-based baseline and the statistical sampling frameworks:
-Agent 1	Agent 2	Agent 1 Wins	Agent 2 Wins	Draws
-Minimax	Rule-Based	94	2	4
-Pure MCTS	Heuristic MCTS	44	46	10
-Minimax	Heuristic MCTS	74	18	8
+<img width="700" height="200" alt="image" src="https://github.com/user-attachments/assets/67df13a9-6c38-42e0-8d7d-61e252d83f3c" />
+
 The MCTS Equivalence: The dead heat (46 to 44) between Pure MCTS and Heuristic MCTS highlighted that truncating simulations early and mapping continuous evaluations to a flat, binary step-function introduces significant backpropagation noise, neutralizing the benefits of handcrafted domain knowledge.
-2. Human Evaluation Tournament (20-Game Tournament)
+### 2. Human Evaluation Tournament (20-Game Tournament)
 A 20-game tournament was held against analytical human players under strict time constraints, using a strictly alternated start sequence (10 matches starting as Player 1 for each side):
 Minimax (Agent 1)	Human (Agent 2)	Draws
 12 (60%)	6 (30%)	2 (10%)
@@ -55,4 +53,5 @@ code
 ├── UI.py                # Graphical interface for Human vs. Agent play
 ├── multiplayer.py       # Graphical interface for Local Human vs. Human play
 ├── experiment_results.csv # Local tracking file for tournament and evaluation logs
+|__ evaluate.py          # Run the(100-Game Tournaments)s 
 
