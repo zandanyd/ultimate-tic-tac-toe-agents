@@ -1,0 +1,5 @@
+Agent 1,Agent 2,A1 Wins,A2 Wins,Draws
+Minimax,Rule-Based,94,2,4
+Pure MCTS,Heuristic MCTS,44,46,10
+Minimax,Heuristic MCTS,74,18,8
+Minimax,Human,12,6,2
