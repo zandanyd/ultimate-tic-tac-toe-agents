@@ -13,34 +13,19 @@ The project contains two dedicated entry points depending on the desired game mo
 To test your skills against the optimized Iterative Deepening Minimax agent, run the main UI script:
 ```bash
 python UI.py
+```
 Alternate Start Protocol: To ensure a fair assessment, the starting player alternates automatically with every game based on local match history tracking.
 Returning to Menu / Next Game: Once a game concludes, press R to automatically alternate roles and start the next match. Press ESC to exit back to the terminal interface.
 2. Local Pass-and-Play (Multiplayer)
 To play locally with a friend on the same screen, launch the multiplayer interface:
 code
-Bash
+```bash
 python multiplayer.py
+```
 🖼️ Graphical User Interface (GUI)
-The custom Pygame GUI visually communicates the hierarchical state representation of UTTT, managing both the individual 
-3
-×
-3
-3×3
- micro-grids and the global 
-3
-×
-3
-3×3
- macro-board.
-Active Board Highlights and Macro-Board Shading
-Active Target Board Constraint: The next valid play area, dictated by the opponent's previous move coordinates, is highlighted in light blue.
-Macro-Board Dominance: Conquered sectors are shaded to represent regional ownership: faint blue for Player 1 (X) and faint red for Player 2 (O).
-<p align="center">
-<img src="images/early_game_ui.png" width="45%" alt="Early-Game GUI State" />
-<img src="images/late_game_ui.png" width="45%" alt="Late-Game GUI State" />
-<br>
-<em>Figure 1: Custom Pygame user interface showing (Left) early-stage active macro-board highlighting, and (Right) late-stage macro-board conquered sectors.</em>
-</p>
+The custom Pygame GUI visually communicates the hierarchical state representation of UTTT, managing both the individual 3×3 micro-grids and the global 3×3 macro-board.
+<img width="602" height="626" alt="image (1)" src="https://github.com/user-attachments/assets/1cae2536-9288-444c-8b1b-43ad39e88964" />
+
 🤖 Implemented Agents
 Iterative Deepening Minimax: Optimized using Alpha-Beta pruning and a Transposition Table (memoization cache) to handle the directed acyclic graph (DAG) structure of the game state. Operating under a strict 2.0-second time limit, it evaluates branches to varying depths depending on branching factor constraints.
 Pure MCTS: A statistical sampling agent driven by the standard Upper Confidence bound applied to Trees (UCT) formula. It conducts completely random rollouts to terminal game states to approximate state values.
