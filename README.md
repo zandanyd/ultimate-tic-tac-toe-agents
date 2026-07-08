@@ -55,5 +55,4 @@ code
 ├── UI.py                # Graphical interface for Human vs. Agent play
 ├── multiplayer.py       # Graphical interface for Local Human vs. Human play
 ├── experiment_results.csv # Local tracking file for tournament and evaluation logs
-└── images/              # Visual assets for the documentation
 
