@@ -24,7 +24,8 @@ python multiplayer.py
 ```
 ## 🖼️ Graphical User Interface (GUI)
 The custom Pygame GUI visually communicates the hierarchical state representation of UTTT, managing both the individual 3×3 micro-grids and the global 3×3 macro-board.
-<img width="602" height="626" alt="image (1)" src="https://github.com/user-attachments/assets/1cae2536-9288-444c-8b1b-43ad39e88964" />
+
+<img width="200" height="200" alt="image (1)" src="https://github.com/user-attachments/assets/1cae2536-9288-444c-8b1b-43ad39e88964" />
 
 ## 🤖 Implemented Agents
 Iterative Deepening Minimax: Optimized using Alpha-Beta pruning and a Transposition Table (memoization cache) to handle the directed acyclic graph (DAG) structure of the game state. Operating under a strict 2.0-second time limit, it evaluates branches to varying depths depending on branching factor constraints.
