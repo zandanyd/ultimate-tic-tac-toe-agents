@@ -3,7 +3,7 @@
 
 An empirical comparative study of classical and statistical search algorithms in the highly tactical environment of Ultimate Tic-Tac-Toe (UTTT). This repository contains the implementations of adversarial agents—specifically an optimized Iterative Deepening Minimax agent and rollout-truncated Monte Carlo Tree Search (MCTS) variants—alongside a rule-based baseline and a Pygame-driven graphical user interface (GUI) built for human evaluation.
 
----
+
 
 ## 🎮 How to Play and Run the Game
 
