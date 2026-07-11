@@ -62,7 +62,7 @@ def run_matchup(agent1, agent2, agent1_name, agent2_name, num_games=10):
 
 
 def run_all_experiments():
-    NUM_GAMES = 20
+    NUM_GAMES = 100
     results = []
 
     minimax_args = {"player_id": 1, "depth": 3}
